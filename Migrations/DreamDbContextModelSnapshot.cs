@@ -375,9 +375,18 @@ namespace DreamApi.Migrations
                     b.Property<string>("Links")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("MostrarEstatisticas")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("MostrarPublicacoes")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PerfilPublico")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Senha")
                         .IsRequired()

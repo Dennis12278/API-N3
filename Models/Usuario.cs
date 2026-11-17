@@ -9,5 +9,10 @@
         public string? Biografia { get; set; }
         public string? Links { get; set; }
         public string? Avatar { get; set; }
+
+        // configurações de visibilidade
+        public bool PerfilPublico { get; set; } = true;
+        public bool MostrarPublicacoes { get; set; } = true;
+        public bool MostrarEstatisticas { get; set; } = true;
     }
 }

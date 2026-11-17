@@ -46,5 +46,42 @@ namespace DreamApi.Controllers
 
             return perfilService.Salvar(id, dto) ? Ok() : NotFound();
         }
+
+        [HttpGet("{id:int}/Preferencias")]
+        public IActionResult Preferencias(int id)
+        {
+            PreferenciasDto? dados = perfilService.ObterPreferencias(id);
+
+            return dados == null ? NotFound() : Ok(dados);
+        }
+
+        [HttpPut("{id:int}/Preferencias")]
+        public IActionResult SalvarPreferencias(int id, [FromBody] PreferenciasDto dto)
+        {
+            return perfilService.SalvarPreferencias(id, dto) ? Ok() : NotFound();
+        }
+
+        [HttpPut("{id:int}/Senha")]
+        public IActionResult TrocarSenha(int id, [FromBody] TrocarSenhaDto dto)
+        {
+            if (string.IsNullOrWhiteSpace(dto.NovaSenha) || dto.NovaSenha.Length < 6)
+            {
+                return BadRequest("A nova senha precisa ter pelo menos 6 caracteres.");
+            }
+
+            int resultado = perfilService.TrocarSenha(id, dto);
+
+            if (resultado == 1)
+            {
+                return NotFound();
+            }
+
+            if (resultado == 2)
+            {
+                return BadRequest("A senha atual está incorreta.");
+            }
+
+            return Ok();
+        }
     }
 }
