@@ -54,8 +54,14 @@ namespace DreamApi.Migrations
                     b.Property<DateTime>("Data")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime?>("DataFim")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Descricao")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Detalhes")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("IdUsuario")

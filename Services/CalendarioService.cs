@@ -33,18 +33,20 @@ namespace DreamApi.Services
             return calendario;
         }
 
+        // só o dono do evento pode alterar
         public bool Editar(Calendario calendario)
         {
             Calendario? existente = context.Calendarios.Find(calendario.Id);
 
-            if (existente == null)
+            if (existente == null || existente.IdUsuario != calendario.IdUsuario)
             {
                 return false;
             }
 
-            existente.IdUsuario = calendario.IdUsuario;
             existente.Data = calendario.Data;
+            existente.DataFim = calendario.DataFim;
             existente.Descricao = calendario.Descricao;
+            existente.Detalhes = calendario.Detalhes;
 
             context.SaveChanges();
 
