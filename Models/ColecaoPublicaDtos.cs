@@ -23,6 +23,10 @@
         public string? Capa { get; set; }
         public DateTime? DataPublicacao { get; set; }
         public int Ordem { get; set; }
+
+        // autor da publicação (para o filtro de usuário no leitor)
+        public int IdUsuario { get; set; }
+        public string NomeUsuario { get; set; } = "";
     }
 
     // página da coleção

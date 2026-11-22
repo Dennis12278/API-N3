@@ -12,5 +12,9 @@
         public string Visibilidade { get; set; }
         public DateTime? DataPublicacao { get; set; }
         public string? Capa { get; set; }
+
+        // arquivo para leitura (PDF ou TXT)
+        public string? ArquivoLeitura { get; set; }
+        public string? TipoArquivo { get; set; }
     }
 }

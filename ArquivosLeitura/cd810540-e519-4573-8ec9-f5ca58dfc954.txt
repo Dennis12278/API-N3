@@ -1,0 +1,42 @@
+3.1 Requisitos Funcionais
+Ator: Aluno
+
+RF01 – O aluno poderá realizar cadastro no sistema.
+
+RF02 – O aluno poderá criar, visualizar, editar e excluir anotações e resumos.
+
+RF03 – O aluno poderá revisar conteúdos criados ou salvos.
+
+RF04 – O aluno poderá definir metas de estudo pessoais.
+
+RF05 – O aluno poderá planejar seus estudos em um calendário inteligente, visualizando períodos disponíveis e ocupados.
+
+RF06 – O aluno poderá receber notificações relacionadas ao planejamento de estudos.
+
+RF07 – O aluno poderá compartilhar conteúdos de estudo, definindo o nível de privacidade (público, privado).
+
+Ator: Editor
+
+RF08 – O editor poderá criar conteúdos educacionais na plataforma.
+
+RF09 – O editor poderá editar conteúdos educacionais.
+
+RF10 – O editor poderá publicar conteúdos educacionais.
+
+RF11 – O editor poderá definir o nível de visibilidade dos conteúdos (público, privado ou restrito).
+
+RF12 – O editor poderá compartilhar conteúdos educacionais com usuários ou grupos.
+
+3.2 Requisitos Não Funcionais
+
+RNF01 – Usabilidade: O sistema deverá possuir interface intuitiva, de fácil navegação e aprendizado.
+
+RNF02 – Desempenho: O sistema deverá responder às ações do usuário em tempo adequado, sem atrasos perceptíveis.
+
+RNF03 – Segurança: O sistema deverá garantir autenticação segura e proteção dos dados dos usuários.
+
+RNF04 – Disponibilidade: O sistema deverá manter alta disponibilidade (uptime), minimizando interrupções.
+
+RNF05 – Escalabilidade: O sistema deverá suportar aumento no número de usuários sem degradação significativa de desempenho.
+
+RNF06 – Compatibilidade: O sistema deverá ser compatível com dispositivos móveis Android e iOS.

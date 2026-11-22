@@ -70,6 +70,7 @@ builder.Services.AddScoped<MarcadorPublicacaoService>();
 builder.Services.AddScoped<HistoricoLeituraService>();
 builder.Services.AddScoped<PerfilService>();
 builder.Services.AddScoped<SeguidorService>();
+builder.Services.AddScoped<ArquivoLeituraService>();
 
 builder.Services.AddOpenApi();
 

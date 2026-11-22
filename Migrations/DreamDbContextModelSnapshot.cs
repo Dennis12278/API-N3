@@ -168,6 +168,9 @@ namespace DreamApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("ArquivoLeitura")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Capa")
                         .HasColumnType("nvarchar(max)");
 
@@ -189,6 +192,9 @@ namespace DreamApi.Migrations
 
                     b.Property<bool>("Revisado")
                         .HasColumnType("bit");
+
+                    b.Property<string>("TipoArquivo")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Titulo")
                         .IsRequired()

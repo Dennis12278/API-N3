@@ -146,10 +146,24 @@ namespace DreamApi.Services
                         Titulo = d.Titulo,
                         Capa = d.Capa,
                         DataPublicacao = d.DataPublicacao,
-                        Ordem = cd.Ordem
+                        Ordem = cd.Ordem,
+                        IdUsuario = d.IdUsuario
                     })
                 .OrderBy(i => i.Ordem)
                 .ToList();
+
+            // nome de quem publicou cada título
+            List<int> autores = itens.Select(i => i.IdUsuario).Distinct().ToList();
+
+            Dictionary<int, string> nomesAutores = context.Usuarios
+                .AsNoTracking()
+                .Where(u => autores.Contains(u.Id))
+                .ToDictionary(u => u.Id, u => u.Nome);
+
+            foreach (ColecaoItemDto item in itens)
+            {
+                item.NomeUsuario = nomesAutores.ContainsKey(item.IdUsuario) ? nomesAutores[item.IdUsuario] : "";
+            }
 
             var curtidas = context.ColecoesCurtidas
                 .AsNoTracking()
