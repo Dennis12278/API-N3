@@ -482,3 +482,8 @@ $RECYCLE.BIN/
 *.swp
 
 **/wwwroot/capas/
+
+# banco e arquivos sensíveis
+DreamDB.sql
+*.sql
+ArquivosLeitura/
