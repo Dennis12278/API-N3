@@ -60,6 +60,7 @@ builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<TipoDocumentoService>();
 builder.Services.AddScoped<GrupoService>();
 builder.Services.AddScoped<GrupoUsuarioService>();
+builder.Services.AddScoped<GrupoCriacaoService>();
 builder.Services.AddScoped<CompartilhamentoService>();
 builder.Services.AddScoped<NotificacaoService>();
 builder.Services.AddScoped<CalendarioService>();
